@@ -1,10 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import 'tailwindcss';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 body {
+  background-color: #f4f4f5;
+  background-image: radial-gradient(ellipse at 20% 50%, #e0e7ff44 0%, transparent 60%),
+                    radial-gradient(ellipse at 80% 20%, #dbeafe33 0%, transparent 60%);
+}
+
+.dark body {
   background-color: #09090b;
   background-image: radial-gradient(ellipse at 20% 50%, #1e1b4b22 0%, transparent 60%),
                     radial-gradient(ellipse at 80% 20%, #16213e33 0%, transparent 60%);
+}
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: background-color 150ms;
+}
+
+.nav-link:hover {
+  background-color: rgb(0 0 0 / 0.08);
+}
+
+.dark .nav-link:hover {
+  background-color: rgb(255 255 255 / 0.15);
 }
 
 @theme {
