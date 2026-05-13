@@ -16,7 +16,7 @@ body {
 }
 
 .nav-link {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 10px;
   transition: background-color 150ms;
 }
@@ -26,7 +26,7 @@ body {
 }
 
 .dark .nav-link:hover {
-  background-color: rgb(255 255 255 / 0.15);
+  background-color: rgb(255 255 255 / 0.1);
 }
 
 @theme {
