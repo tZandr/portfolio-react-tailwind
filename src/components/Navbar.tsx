@@ -2,40 +2,56 @@ import { Link } from 'react-router-dom';
 
 type NavbarProps = {
   onToggleTheme: () => void;
+  scrolled: boolean;
 };
 
-export function Navbar({ onToggleTheme }: NavbarProps) {
+export function Navbar({ onToggleTheme, scrolled }: NavbarProps) {
   return (
-    <nav className="flex justify-between items-center border border-black/10 dark:border-white/20 rounded-full bg-black/5 dark:bg-white/10 backdrop-blur-md mx-7 laptop:mx-24 desktop:mx-auto desktop:max-w-5xl py-4 px-8 text-zinc-900 dark:text-zinc-100 text-sm shadow-xl shadow-black/10 dark:shadow-black/50">
+    <nav
+      style={{
+        borderRadius: scrolled ? '100px' : '0',
+        maxWidth: scrolled ? '1024px' : '100%',
+        top: scrolled ? '1.25rem' : '0',
+      }}
+      className={`sticky z-50 mx-auto flex justify-between items-center border backdrop-blur-md text-zinc-900 dark:text-zinc-100 text-xs transition-all duration-1000 ease-in-out tracking-widest ${
+        scrolled
+          ? 'py-3.5 px-8 shadow-xl border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/10 shadow-black/10 dark:shadow-black/50'
+          : 'py-5 px-12 border-transparent bg-transparent'
+      }`}
+    >
       <Link
         to="/"
         className="flex items-center justify-center w-8 h-8 text-base font-bold tracking-widest transition-colors"
       >
         AT
       </Link>
-      <ul className="flex justify-between gap-10">
-        <li>
-          <Link to="/" className="nav-link">HOME</Link>
-        </li>
-        <li>
-          <Link to="/projects" className="nav-link">PROJECTS</Link>
-        </li>
-        <li>
-          <Link to="/contact" className="nav-link">CONTACT</Link>
-        </li>
-      </ul>
-      <button onClick={onToggleTheme} className="text-base">
-        <img
-          src="src\assets\modeLight.png"
-          alt="Light mode"
-          className="dark:hidden w-5 h-5"
-        />
-        <img
-          src="src\assets\modeDark.png"
-          alt="Dark mode"
-          className="hidden dark:inline w-5 h-5 mb-0.5"
-        />
-      </button>
+
+      <div className="flex items-center gap-5">
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          style={{ transition: 'opacity 700ms, background-color 150ms' }}
+          className={`nav-link py-0 ${scrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        >
+          BACK TO TOP
+        </button>
+        <button
+          onClick={onToggleTheme}
+          className="flex items-center gap-2 border border-black/15 dark:border-white/20 rounded-full px-4 py-1 hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-1000"
+        >
+          <span className="dark:hidden">Light</span>
+          <img
+            src="src\assets\modeLight.png"
+            alt="Light mode"
+            className="dark:hidden w-3 h-3"
+          />
+          <span className="hidden dark:inline">Dark</span>
+          <img
+            src="src\assets\modeDark.png"
+            alt="Dark mode"
+            className="hidden dark:inline w-3 h-3"
+          />
+        </button>
+      </div>
     </nav>
   );
 }

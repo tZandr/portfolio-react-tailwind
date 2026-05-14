@@ -15,8 +15,16 @@ body {
                     radial-gradient(ellipse at 80% 20%, #16213e33 0%, transparent 60%);
 }
 
+.theme-transitioning,
+.theme-transitioning *,
+.theme-transitioning *::before,
+.theme-transitioning *::after {
+  transition: background-color 500ms ease, border-color 500ms ease, color 500ms ease !important;
+}
+
 .nav-link {
-  padding: 0.6rem 1rem;
+  padding-inline: 1rem;
+  padding-block: 0.6rem;
   border-radius: 10px;
   transition: background-color 150ms;
 }

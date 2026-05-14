@@ -6,17 +6,28 @@ export default function MainLayout() {
   const [theme, setTheme] = useState<'dark' | 'light'>(
     () => (localStorage.getItem('theme') as 'dark' | 'light') ?? 'dark',
   );
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
     localStorage.setItem('theme', theme);
   }, [theme]);
 
-  const toggleTheme = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const toggleTheme = () => {
+    document.documentElement.classList.add('theme-transitioning');
+    setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
+    setTimeout(() => document.documentElement.classList.remove('theme-transitioning'), 500);
+  };
   return (
-    <div className="font-display min-h-screen text-zinc-900 dark:text-zinc-100 pt-10">
-      <Navbar onToggleTheme={toggleTheme} />
-      <main className="mx-auto max-w-5xl px-4 py-8">
+    <div className="font-display min-h-screen text-zinc-900 dark:text-zinc-100">
+      <Navbar onToggleTheme={toggleTheme} scrolled={scrolled} />
+      <main>
         <Outlet />
       </main>
     </div>
