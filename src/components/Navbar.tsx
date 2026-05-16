@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 
 type NavbarProps = {
   onToggleTheme: () => void;
@@ -19,24 +18,24 @@ export function Navbar({ onToggleTheme, scrolled }: NavbarProps) {
           : 'py-5 px-12 border-transparent bg-transparent'
       }`}
     >
-      <Link
-        to="/"
-        className="flex items-center justify-center w-8 h-8 text-base font-bold tracking-widest transition-colors"
+      <a
+        href="#"
+        className="flex items-center justify-center w-8 h-8 text-base font-extralight tracking-widest transition-colors"
       >
         AT
-      </Link>
+      </a>
 
       <div className="flex items-center gap-5">
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           style={{ transition: 'opacity 700ms, background-color 150ms' }}
-          className={`nav-link py-0 ${scrolled ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+          className={`nav-link py-0 ${scrolled ? 'opacity-100 font-light' : 'opacity-0 pointer-events-none'}`}
         >
           BACK TO TOP
         </button>
         <button
           onClick={onToggleTheme}
-          className="flex items-center gap-2 border border-black/15 dark:border-white/20 rounded-full px-4 py-1 hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-1000"
+          className="font-light flex items-center gap-2 border border-black/15 dark:border-white/20 rounded-full px-4 py-1 hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-1000"
         >
           <span className="dark:hidden">Light</span>
           <img

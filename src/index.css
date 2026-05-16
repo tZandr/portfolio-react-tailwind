@@ -1,25 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 body {
   background-color: #f4f4f5;
-  background-image: radial-gradient(ellipse at 20% 50%, #e0e7ff44 0%, transparent 60%),
-                    radial-gradient(ellipse at 80% 20%, #dbeafe33 0%, transparent 60%);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, #e0e7ff44 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, #dbeafe33 0%, transparent 60%);
 }
 
 .dark body {
   background-color: #09090b;
-  background-image: radial-gradient(ellipse at 20% 50%, #1e1b4b22 0%, transparent 60%),
-                    radial-gradient(ellipse at 80% 20%, #16213e33 0%, transparent 60%);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, #1e1b4b22 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, #16213e33 0%, transparent 60%);
 }
 
 .theme-transitioning,
 .theme-transitioning *,
 .theme-transitioning *::before,
 .theme-transitioning *::after {
-  transition: background-color 500ms ease, border-color 500ms ease, color 500ms ease !important;
+  transition:
+    background-color 500ms ease,
+    border-color 500ms ease,
+    color 500ms ease !important;
 }
 
 .nav-link {
