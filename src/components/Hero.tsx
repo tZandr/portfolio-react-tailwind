@@ -1,9 +1,23 @@
 export function Hero() {
   return (
     <section
-      className="pb-16 space-y-6 w-full flex flex-col justify-end"
+      className="relative pb-16 space-y-6 w-full flex flex-col justify-end"
       style={{ height: 'calc(100dvh - 64px)' }}
     >
+      <div className="absolute top-0 right-0 flex flex-col items-center gap-2 mt-12">
+        <div className="w-px h-16 overflow-hidden relative bg-zinc-700/30">
+          <div
+            className="absolute inset-x-0 h-full bg-red-500"
+            style={{ animation: 'scroll-line 2.4s ease infinite' }}
+          />
+        </div>
+        <span
+          style={{ writingMode: 'vertical-lr' }}
+          className="text-[9px] tracking-[0.2em] text-zinc-400 uppercase"
+        >
+          Scroll
+        </span>
+      </div>
       <p className="text-xs text-zinc-500 dark:text-zinc-400 tracking-widest uppercase">
         Fullstack Developer
       </p>

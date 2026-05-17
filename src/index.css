@@ -42,6 +42,20 @@ body {
   background-color: rgb(255 255 255 / 0.1);
 }
 
+@keyframes scroll-line {
+  0% {
+    transform: translateY(-120%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 @theme {
   --font-display: 'Inter', sans-serif;
   --breakpoint-laptop: 1080px;
