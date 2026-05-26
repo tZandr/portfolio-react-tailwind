@@ -15,7 +15,7 @@ export const clientProjects: Project[] = [
       'E-commerce store for a fragrance brand. Built and deployed as a live customer project.',
     url: 'https://scentique.se',
     display: 'scentique.se',
-    image: '/src/assets/Scentique.webp',
+    image: '/src/assets/scentique-pv.jpg',
     tags: ['Shopify'],
   },
   {
@@ -24,6 +24,7 @@ export const clientProjects: Project[] = [
       'Booking and presentation site for a barber studio. Live customer project.',
     url: 'https://www.barberbydavid.com',
     display: 'barberbydavid.com',
+    image: '/src/assets/barberbydavid-pv.jpg',
     tags: ['WIX'],
   },
 ];

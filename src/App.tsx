@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { Projects } from './components/Projects';
 import { About } from './components/About';
 import { Marquee } from './components/Marquee';
+import { Contact } from './components/Contact'
 
 export default function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>(
@@ -38,9 +39,10 @@ export default function App() {
         <Hero />
       </div>
       <Marquee />
-      <div className="pb-24 px-12">
+      <div className="px-12">
         <Projects />
         <About />
+        <Contact />
       </div>
     </div>
   );
