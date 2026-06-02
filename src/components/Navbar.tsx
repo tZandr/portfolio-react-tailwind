@@ -14,8 +14,8 @@ export function Navbar({ onToggleTheme, scrolled }: NavbarProps) {
       }}
       className={`sticky z-50 mx-auto flex justify-between items-center border backdrop-blur-md text-zinc-900 dark:text-zinc-100 text-xs transition-all duration-1000 ease-in-out tracking-widest ${
         scrolled
-          ? 'py-3.5 px-8 shadow-xl border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/10 shadow-black/10 dark:shadow-black/50'
-          : 'py-5 px-12 border-transparent bg-transparent'
+          ? 'py-3.5 px-4 sm:px-8 shadow-xl border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/10 shadow-black/10 dark:shadow-black/50'
+          : 'py-5 px-4 sm:px-8 lg:px-12 border-transparent bg-transparent'
       }`}
     >
       <a
@@ -29,7 +29,7 @@ export function Navbar({ onToggleTheme, scrolled }: NavbarProps) {
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           style={{ transition: 'opacity 700ms, background-color 150ms' }}
-          className={`nav-link py-0 ${scrolled ? 'opacity-100 font-light' : 'opacity-0 pointer-events-none'}`}
+          className={`nav-link py-0 hidden sm:block ${scrolled ? 'opacity-100 font-light' : 'opacity-0 pointer-events-none'}`}
         >
           BACK TO TOP
         </button>

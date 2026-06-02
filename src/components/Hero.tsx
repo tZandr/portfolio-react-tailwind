@@ -18,18 +18,21 @@ export function Hero() {
           Scroll
         </span>
       </div>
-      <p className="text-xs text-zinc-500 dark:text-zinc-400 tracking-widest uppercase">
-        Fullstack Developer
-      </p>
-      <h1 className="text-8xl font-thin tracking-sm">
-        ALEXANDER <br /> TJERNSTRÖM
-      </h1>
-      <div className="flex flex-row justify-between">
-        <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed w-sm">
+      <div>
+        <p className="text-xs text-zinc-500 dark:text-zinc-400 tracking-widest uppercase">
+          Fullstack Developer
+        </p>
+        <h1 className="text-[clamp(2.8rem,10vw,7.5rem)] font-black tracking-sm leading-none">
+          <span className="block">ALEXANDER</span>
+          <span className="block">TJERNSTRÖM</span>
+        </h1>
+      </div>
+      <div className="flex flex-col sm:flex-row justify-between gap-4">
+        <p className="text-base text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-sm">
           I build clean, focused web experiences for businesses that care about
           how they show up online.
         </p>
-        <div className="flex flex-col justify-end items-end gap-2">
+        <div className="flex flex-row sm:flex-col justify-start sm:justify-end items-start sm:items-end gap-2">
           <p className="flex items-center gap-2 border border-green-500/40 rounded-full py-2 px-4 text-xs text-green-500 tracking-widest uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-green-500 shrink-0"></span>
             Looking for work

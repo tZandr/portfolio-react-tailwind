@@ -1,5 +1,6 @@
 import { ProjectCard } from './ProjectCard';
 import { clientProjects, personalProjects } from '../data/projects';
+import { MdArrowOutward } from 'react-icons/md';
 
 const SectionLabel = ({ children }: { children: React.ReactNode }) => (
   <h2 className="text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400">
@@ -16,7 +17,7 @@ export function Projects() {
             <p className="text-[10px] text-zinc-500 dark:text-zinc-400 tracking-widest uppercase">
               Selected Projects
             </p>
-            <h1 className="text-8xl font-thin tracking-sm">WORK</h1>
+            <h1 className="text-5xl sm:text-8xl font-black tracking-sm">WORK</h1>
           </div>{' '}
           <SectionLabel>E-Commerce Projects</SectionLabel>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -41,7 +42,7 @@ export function Projects() {
           rel="noreferrer"
           className="inline-flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
         >
-          See more on GitHub ↗
+          See more on GitHub <MdArrowOutward size={14} />
         </a>
       </div>
     </section>

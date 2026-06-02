@@ -31,11 +31,13 @@ export const clientProjects: Project[] = [
 
 export const personalProjects: Project[] = [
   {
-    name: 'Coming soon',
-    description: 'Currently in progress.',
-    url: '#',
-    display: '',
-    placeholder: true,
+    name: 'Hyrule Compendium',
+    description:
+      'A searchable Breath of the Wild compendium built with vanilla JS. Heavy focus on custom styling and API integration.',
+    url: 'https://github.com/tZandr/Hyrule-Compendium-App',
+    display: 'github.com/tZandr',
+    image: '/src/assets/HyruleCompendium.jpg',
+    tags: ['JS', 'CSS', 'API'],
   },
   {
     name: 'Coming soon',

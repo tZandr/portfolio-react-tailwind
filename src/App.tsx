@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { Projects } from './components/Projects';
 import { About } from './components/About';
 import { Marquee } from './components/Marquee';
+import { Footer } from './components/Footer'
 
 export default function App() {
   const [theme, setTheme] = useState<'dark' | 'light'>(
@@ -34,13 +35,14 @@ export default function App() {
   return (
     <div className="font-display min-h-screen text-zinc-900 dark:text-zinc-100">
       <Navbar onToggleTheme={toggleTheme} scrolled={scrolled} />
-      <div className="px-12">
+      <div className="px-4 sm:px-8 lg:px-12">
         <Hero />
       </div>
       <Marquee />
-      <div className="px-12">
+      <div className="px-4 sm:px-8 lg:px-12">
         <Projects />
         <About />
+        <Footer />
       </div>
     </div>
   );
