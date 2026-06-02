@@ -3,7 +3,7 @@ import { clientProjects, personalProjects } from '../data/projects';
 import { MdArrowOutward } from 'react-icons/md';
 
 const SectionLabel = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="text-xs tracking-widest uppercase text-zinc-500 dark:text-zinc-400">
+  <h2 className="text-[10px] tracking-widest uppercase text-zinc-500 dark:text-zinc-400">
     {children}
   </h2>
 );
@@ -11,16 +11,16 @@ const SectionLabel = ({ children }: { children: React.ReactNode }) => (
 export function Projects() {
   return (
     <section className="py-16">
-      <div className="space-y-18 w-full">
+      <div className="flex flex-col gap-18 w-full">
         <div className="space-y-6">
           <div className="border-b border-zinc-800 dark:border-zinc-200/10 pb-5 mb-15">
             <p className="text-[10px] text-zinc-500 dark:text-zinc-400 tracking-widest uppercase">
               Selected Projects
             </p>
-            <h1 className="text-5xl sm:text-8xl font-black tracking-sm">WORK</h1>
+            <h1 className="text-6xl sm:text-8xl font-black tracking-sm">WORK</h1>
           </div>{' '}
           <SectionLabel>E-Commerce Projects</SectionLabel>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2">
             {clientProjects.map((project) => (
               <ProjectCard key={project.name} project={project} />
             ))}
@@ -29,7 +29,7 @@ export function Projects() {
 
         <div className="space-y-6">
           <SectionLabel>Personal Projects</SectionLabel>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2">
             {personalProjects.map((project, i) => (
               <ProjectCard key={i} project={project} />
             ))}
@@ -40,7 +40,7 @@ export function Projects() {
           href="https://github.com/tZandr"
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+          className="-mt-10 inline-flex items-center gap-2 text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
         >
           See more on GitHub <MdArrowOutward size={14} />
         </a>

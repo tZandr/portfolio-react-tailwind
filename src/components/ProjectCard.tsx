@@ -21,7 +21,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       rel="noreferrer"
       className="group flex flex-col sm:flex-row border border-black/10 dark:border-white/10 rounded-2xl overflow-hidden hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
     >
-      <div className="flex flex-col justify-between p-6 sm:w-1/2">
+      <div className="flex flex-col justify-between p-4 sm:p-6 sm:w-1/2">
         <div>
           <div className="flex items-start justify-between">
             <h3 className="font-semibold">{project.name}</h3>
@@ -49,7 +49,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           )}
         </div>
       </div>
-      <div className="h-48 sm:h-auto sm:w-1/2">
+      <div className="h-36 sm:h-auto sm:w-1/2">
         {project.image ? (
           <img
             src={project.image}

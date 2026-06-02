@@ -14,7 +14,7 @@ const items = [
 ];
 
 const Row = () => (
-  <div className="flex items-center gap-12 mr-12 uppercase font-light text-sm text-zinc-400 tracking-[0.1em]">
+  <div className="flex items-center gap-6 sm:gap-12 mr-6 sm:mr-12 uppercase font-light text-xs sm:text-sm text-zinc-400 tracking-[0.1em]">
     {items.map((item) => (
       <>
         <span key={item}>{item}</span>

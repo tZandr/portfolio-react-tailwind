@@ -58,6 +58,7 @@ body {
 
 @theme {
   --font-display: 'Inter', sans-serif;
+  --breakpoint-xs: 430px;
   --breakpoint-laptop: 1080px;
   --breakpoint-desktop: 1440px;
 }

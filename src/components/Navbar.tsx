@@ -1,3 +1,4 @@
+import { FaMoon, FaRegMoon } from 'react-icons/fa';
 
 type NavbarProps = {
   onToggleTheme: () => void;
@@ -9,13 +10,13 @@ export function Navbar({ onToggleTheme, scrolled }: NavbarProps) {
     <nav
       style={{
         borderRadius: scrolled ? '100px' : '0',
-        maxWidth: scrolled ? '1024px' : '100%',
+        maxWidth: scrolled ? 'min(1024px, calc(100% - 2rem))' : '100%',
         top: scrolled ? '1.25rem' : '0',
       }}
       className={`sticky z-50 mx-auto flex justify-between items-center border backdrop-blur-md text-zinc-900 dark:text-zinc-100 text-xs transition-all duration-1000 ease-in-out tracking-widest ${
         scrolled
           ? 'py-3.5 px-4 sm:px-8 shadow-xl border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/10 shadow-black/10 dark:shadow-black/50'
-          : 'py-5 px-4 sm:px-8 lg:px-12 border-transparent bg-transparent'
+          : 'py-5 px-6 sm:px-8 lg:px-12 border-transparent bg-transparent'
       }`}
     >
       <a
@@ -38,17 +39,9 @@ export function Navbar({ onToggleTheme, scrolled }: NavbarProps) {
           className="font-light flex items-center gap-2 border border-black/15 dark:border-white/20 rounded-full px-4 py-1 hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-1000"
         >
           <span className="dark:hidden">Light</span>
-          <img
-            src="src\assets\modeLight.png"
-            alt="Light mode"
-            className="dark:hidden w-3 h-3"
-          />
+          <FaMoon size={12} className="dark:hidden" />
           <span className="hidden dark:inline">Dark</span>
-          <img
-            src="src\assets\modeDark.png"
-            alt="Dark mode"
-            className="hidden dark:inline w-3 h-3"
-          />
+          <FaRegMoon size={12} className="hidden dark:inline" />
         </button>
       </div>
     </nav>

@@ -29,15 +29,15 @@ export function About() {
   };
 
   return (
-    <section className="pt-16 flex flex-col w-full">
-      <div className="border-b border-zinc-800 dark:border-zinc-200/10 pb-5 mb-15">
+    <section className="pt-8 sm:pt-16 flex flex-col w-full">
+      <div className="border-b border-zinc-800 dark:border-zinc-200/10 pb-5 mb-6 sm:mb-15">
         <p className="text-[10px] text-zinc-500 dark:text-zinc-400 tracking-widest uppercase">
           Who am i?
         </p>
-        <h1 className="text-5xl sm:text-8xl font-black tracking-sm uppercase">About</h1>
+        <h1 className="text-6xl sm:text-8xl font-black tracking-sm uppercase">About</h1>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 my-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 my-6 sm:my-12">
         <div className="text-lg text-zinc-700 dark:text-zinc-300 leading-relaxed space-y-6">
           <p>
             I'm a fullstack developer based in Stockholm with a strong
@@ -85,7 +85,7 @@ export function About() {
             </a>
           </div>
         </div>
-        <div className="space-y-8 mt-10 sm:mt-0 sm:ml-20">
+        <div className="space-y-16 mt-14 sm:space-y-8 sm:mt-0 sm:ml-20">
           <div className="space-y-4">
             <p className="text-xs text-zinc-500 dark:text-zinc-400 tracking-widest uppercase">
               Skills
