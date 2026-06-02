@@ -28,7 +28,7 @@ export function Projects() {
         </div>
 
         <div className="space-y-6">
-          <SectionLabel>Personal Projects</SectionLabel>
+          <SectionLabel>Selected Projects</SectionLabel>
           <div className="grid grid-cols-1 gap-3 sm:gap-4 sm:grid-cols-2">
             {personalProjects.map((project, i) => (
               <ProjectCard key={i} project={project} />
