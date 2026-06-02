@@ -1,3 +1,7 @@
+import scentiquePv from '../assets/scentique-pv.jpg';
+import barberPv from '../assets/barberbydavid-pv.jpg';
+import hyrulePv from '../assets/HyruleCompendium.jpg';
+
 export type Project = {
   name: string;
   description: string;
@@ -15,7 +19,7 @@ export const clientProjects: Project[] = [
       'E-commerce store for a fragrance brand. Built and deployed as a live customer project.',
     url: 'https://scentique.se',
     display: 'scentique.se',
-    image: '/src/assets/scentique-pv.jpg',
+    image: scentiquePv,
     tags: ['Shopify'],
   },
   {
@@ -24,7 +28,7 @@ export const clientProjects: Project[] = [
       'Booking and presentation site for a barber studio. Live customer project.',
     url: 'https://www.barberbydavid.com',
     display: 'barberbydavid.com',
-    image: '/src/assets/barberbydavid-pv.jpg',
+    image: barberPv,
     tags: ['WIX'],
   },
 ];
@@ -36,7 +40,7 @@ export const personalProjects: Project[] = [
       'A searchable Breath of the Wild compendium built with vanilla JS. Heavy focus on custom styling and API integration.',
     url: 'https://github.com/tZandr/Hyrule-Compendium-App',
     display: 'github.com/tZandr',
-    image: '/src/assets/HyruleCompendium.jpg',
+    image: hyrulePv,
     tags: ['JS', 'CSS', 'API'],
   },
   {
