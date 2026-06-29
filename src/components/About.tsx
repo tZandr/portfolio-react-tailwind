@@ -30,8 +30,8 @@ export function About() {
 
   return (
     <section className="pt-8 sm:pt-16 flex flex-col w-full">
-      <div className="border-b border-zinc-800 dark:border-zinc-200/10 pb-5 mb-6 sm:mb-15">
-        <p className="text-[10px] text-zinc-500 dark:text-zinc-400 tracking-widest uppercase">
+      <div className="border-b border-zinc-300 dark:border-zinc-200/10 pb-5 mb-6 sm:mb-15">
+        <p className="text-[10px] text-zinc-600 dark:text-zinc-400 tracking-widest uppercase">
           Who am i?
         </p>
         <h1 className="text-6xl sm:text-8xl font-black tracking-sm uppercase">About</h1>
@@ -58,9 +58,9 @@ export function About() {
             something on this page caught your attention, feel free to reach
             out!
           </p>
-          <div className="flex gap-5 text-[11px] text-zinc-500 dark:text-zinc-400 tracking-widest pt-2">
+          <div className="flex gap-5 text-[11px] text-zinc-600 dark:text-zinc-400 tracking-widest pt-2">
             <a
-              className="hover:text-zinc-200 transition-colors"
+              className="hover:text-zinc-950 dark:hover:text-zinc-200 transition-colors"
               href="/CV.pdf"
               target="_blank"
               rel="noreferrer"
@@ -68,7 +68,7 @@ export function About() {
               <span className="flex items-center gap-1">CV <MdArrowOutward size={12} /></span>
             </a>
             <a
-              className="hover:text-zinc-200 transition-colors"
+              className="hover:text-zinc-950 dark:hover:text-zinc-200 transition-colors"
               href="https://www.linkedin.com/in/alexandertjernstrom/"
               target="_blank"
               rel="noreferrer"
@@ -76,7 +76,7 @@ export function About() {
               LinkedIn
             </a>
             <a
-              className="hover:text-zinc-200 transition-colors"
+              className="hover:text-zinc-950 dark:hover:text-zinc-200 transition-colors"
               href="https://github.com/tZandr"
               target="_blank"
               rel="noreferrer"
@@ -87,14 +87,14 @@ export function About() {
         </div>
         <div className="space-y-16 mt-14 sm:space-y-8 sm:mt-0 sm:ml-20">
           <div className="space-y-4">
-            <p className="text-xs text-zinc-500 dark:text-zinc-400 tracking-widest uppercase">
+            <p className="text-xs text-zinc-600 dark:text-zinc-400 tracking-widest uppercase">
               Skills
             </p>
             <div className="flex flex-wrap gap-2">
               {stack.map((item) => (
                 <span
                   key={item}
-                  className="text-xs border border-black/10 dark:border-white/10 rounded-full px-4 py-1.5 text-zinc-700 dark:text-zinc-400"
+                  className="text-xs border border-zinc-300 dark:border-white/10 rounded-full px-4 py-1.5 text-zinc-700 dark:text-zinc-400"
                 >
                   {item}
                 </span>
@@ -102,7 +102,7 @@ export function About() {
             </div>
           </div>
           <div className="space-y-4">
-            <p className="text-xs text-zinc-500 dark:text-zinc-400 tracking-widest uppercase">
+            <p className="text-xs text-zinc-600 dark:text-zinc-400 tracking-widest uppercase">
               Education
             </p>
             <div className="space-y-6">
@@ -110,7 +110,7 @@ export function About() {
                 <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
                   IT-Högskolan — JavaScript Developer
                 </p>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
+                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-0.5">
                   2025 – 2027 · Ongoing
                 </p>
               </div>
@@ -118,17 +118,17 @@ export function About() {
                 <p className="text-sm font-medium text-zinc-700 dark:text-zinc-300">
                   Högskolan Väst — Webmaster
                 </p>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">
+                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-0.5">
                   2023 – 2025
                 </p>
-                <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1 leading-relaxed">
+                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1 leading-relaxed">
                   Frontend, backend, databases, UX and web servers. Thesis on
                   AI-related security and career impact.{' '}
                   <a
                     href="https://www.diva-portal.org/smash/record.jsf?dswid=3297&pid=diva2%3A1994529&c=1&searchType=SIMPLE&language=en&query=ai-relaterad+os%C3%A4kerhet+och+yrkesval&af=%5B%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all"
                     target="_blank"
                     rel="noreferrer"
-                    className="underline hover:text-zinc-300 transition-colors"
+                    className="underline hover:text-zinc-950 dark:hover:text-zinc-300 transition-colors"
                   >
                     <span className="inline-flex items-center gap-1">Read abstract <MdArrowOutward size={11} /></span>
                   </a>
@@ -140,8 +140,8 @@ export function About() {
       </div>
 
       <div className="mt-16 pt-6">
-        <div className="flex items-end border-b border-zinc-800 dark:border-zinc-200/10 pb-5">
-          <div className="text-[11px] text-zinc-500 dark:text-zinc-400 tracking-widest space-y-1">
+        <div className="flex items-end border-b border-zinc-300 dark:border-zinc-200/10 pb-5">
+          <div className="text-[11px] text-zinc-600 dark:text-zinc-400 tracking-widest space-y-1">
             <button onClick={copyEmail} className="flex gap-1 group">
               <span>alex_tjernstrom@hotmail.com</span>
               {copied ? (

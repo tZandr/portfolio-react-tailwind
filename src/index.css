@@ -6,8 +6,8 @@
 body {
   background-color: #f4f4f5;
   background-image:
-    radial-gradient(ellipse at 20% 50%, #e0e7ff44 0%, transparent 60%),
-    radial-gradient(ellipse at 80% 20%, #dbeafe33 0%, transparent 60%);
+    radial-gradient(ellipse at 20% 50%, #e0e7ff55 0%, transparent 62%),
+    radial-gradient(ellipse at 80% 20%, #dbeafe44 0%, transparent 62%);
 }
 
 .dark body {
