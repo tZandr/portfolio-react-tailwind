@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect, useRef } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Projects } from './components/Projects';
@@ -11,6 +11,7 @@ export default function App() {
     () => (localStorage.getItem('theme') as 'dark' | 'light') ?? 'dark',
   );
   const [scrolled, setScrolled] = useState(false);
+  const navRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', theme === 'dark');
@@ -21,6 +22,23 @@ export default function App() {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // Keep the first screen exactly one viewport tall by measuring the real
+  // navbar height (its unscrolled flow height) into a CSS variable.
+  useLayoutEffect(() => {
+    const measure = () => {
+      const el = navRef.current;
+      if (el) {
+        document.documentElement.style.setProperty('--nav-h', `${el.offsetHeight}px`);
+      }
+    };
+    measure();
+    window.addEventListener('resize', measure);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(measure);
+    }
+    return () => window.removeEventListener('resize', measure);
   }, []);
 
   const toggleTheme = () => {
@@ -34,11 +52,16 @@ export default function App() {
 
   return (
     <div className="font-display min-h-screen text-zinc-900 dark:text-zinc-100">
-      <Navbar onToggleTheme={toggleTheme} scrolled={scrolled} />
-      <div className="px-4 sm:px-8 lg:px-12">
-        <Hero />
+      <Navbar ref={navRef} onToggleTheme={toggleTheme} scrolled={scrolled} />
+      <div
+        className="flex flex-col"
+        style={{ height: 'calc(100dvh - var(--nav-h, 74px))' }}
+      >
+        <div className="flex-1 min-h-0 px-4 sm:px-8 lg:px-12">
+          <Hero />
+        </div>
+        <Marquee />
       </div>
-      <Marquee />
       <div className="px-4 sm:px-8 lg:px-12">
         <Projects />
         <About />

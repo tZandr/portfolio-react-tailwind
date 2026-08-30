@@ -24,7 +24,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex flex-col justify-between p-4 sm:p-6 sm:w-1/2">
         <div>
           <div className="flex items-start justify-between">
-            <h3 className="font-semibold">{project.name}</h3>
+            <h3 className="font-heading font-medium tracking-wide">{project.name}</h3>
             <span className="text-xs text-zinc-500 dark:text-zinc-400 group-hover:text-zinc-800 dark:group-hover:text-zinc-200 transition-colors">
               <MdArrowOutward size={14} />
             </span>
@@ -34,13 +34,13 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </p>
         </div>
         <div className="flex items-center justify-between mt-4">
-          <p className="text-xs text-zinc-600 dark:text-zinc-500">{project.display}</p>
+          <p className="font-mono text-[11px] text-zinc-600 dark:text-zinc-500">{project.display}</p>
           {project.tags && (
             <div className="flex gap-1.5">
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs text-zinc-600 dark:text-zinc-400 border border-zinc-300 dark:border-white/10 rounded-full px-2 py-0.5"
+                  className="font-mono text-[11px] text-zinc-600 dark:text-zinc-400 border border-zinc-300 dark:border-white/10 rounded-full px-2 py-0.5"
                 >
                   {tag}
                 </span>
