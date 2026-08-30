@@ -67,9 +67,9 @@ the Changelog. The "Current state" section is always rewritten to match reality.
 - The bordered-pill "BACK TO TOP" button was removed (menu + the clickable
   wordmark cover it).
 - Pill-on-scroll animation (border-radius / max-width / offset). On mobile the
-  scrolled pill uses `calc(100% - 1.5rem)` max-width + `px-3` so the wordmark
-  lands at ~24px from the edge — the same x as the unscrolled `px-6` nav, so
-  it doesn't jump right when the pill forms.
+  scrolled pill uses `calc(100% - 1rem)` side margins + `px-6` inner padding so
+  the wordmark clears the ~22px rounded cap (was hugging it). Small ~8px
+  rightward settle vs the unscrolled `px-6` nav.
 
 ### Section anchors
 
