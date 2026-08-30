@@ -66,7 +66,10 @@ the Changelog. The "Current state" section is always rewritten to match reality.
   outline.
 - The bordered-pill "BACK TO TOP" button was removed (menu + the clickable
   wordmark cover it).
-- Pill-on-scroll animation (border-radius / max-width / offset) unchanged.
+- Pill-on-scroll animation (border-radius / max-width / offset). On mobile the
+  scrolled pill uses `calc(100% - 1.5rem)` max-width + `px-3` so the wordmark
+  lands at ~24px from the edge — the same x as the unscrolled `px-6` nav, so
+  it doesn't jump right when the pill forms.
 
 ### Section anchors
 
@@ -136,8 +139,12 @@ Unified so the sections read as one document, not floating islands:
   "see more" link are Geist Mono. Dropped a stray `{" "}` text node.
 - `ProjectCard.tsx`: title is Geist `font-medium tracking-wide`; project URL +
   tag pills are Geist Mono.
-- `index.html`: `<title>` = `Alexander Tjernström — Fullstack Developer`, plus a
-  meta description.
+- `index.html`: `<title>` = `Alexander Tjernström · Fullstack Developer`
+  (name first, `·` not em dash). Open Graph + Twitter Card tags added with
+  `og:title` / `twitter:title` = **`Alexander Tjernström`** so shared links
+  (Vercel URL in Slack/iMessage/etc.) lead with the name, role in the
+  description. No OG image yet (`summary` card); `og:url` not set — add the
+  real Vercel URL when known.
 - `Marquee.tsx`: Geist Mono; `shrink-0` so it can't be squeezed; sits flush at
   the bottom of the first screen.
 - `Footer.tsx`: left-aligned (was centered), `border-t`, Geist Mono, two items —

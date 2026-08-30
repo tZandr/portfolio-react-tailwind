@@ -18,12 +18,12 @@ export function Navbar({ onToggleTheme, scrolled, ref }: NavbarProps) {
       ref={ref}
       style={{
         borderRadius: scrolled ? "100px" : "0",
-        maxWidth: scrolled ? "min(1024px, calc(100% - 2rem))" : "100%",
+        maxWidth: scrolled ? "min(1024px, calc(100% - 1.5rem))" : "100%",
         top: scrolled ? "1.25rem" : "0",
       }}
       className={`sticky z-50 mx-auto flex justify-between items-center border backdrop-blur-md text-zinc-900 dark:text-zinc-100 text-xs transition-all duration-1000 ease-in-out tracking-widest ${
         scrolled
-          ? "py-3.5 px-4 sm:px-8 shadow-xl border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/10 shadow-black/10 dark:shadow-black/50"
+          ? "py-3.5 px-3 sm:px-8 shadow-xl border-black/10 dark:border-white/20 bg-black/5 dark:bg-white/10 shadow-black/10 dark:shadow-black/50"
           : "py-5 px-6 sm:px-8 lg:px-12 border-transparent bg-transparent"
       }`}
     >
